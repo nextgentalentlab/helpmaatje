@@ -3,74 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Helpmaatje</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #f4f8fb;
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    header img {
-      max-width: 120px;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      font-size: 2rem;
-      color: #004080;
-    }
-    p {
-      max-width: 600px;
-      font-size: 1.1rem;
-      margin: 1rem auto;
-    }
-    .buttons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .buttons a {
-      background-color: #007acc;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s;
-    }
-    .buttons a:hover {
-      background-color: #005fa3;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
+  <title>Helpmaatje.nl</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Helpmaatje logo">
-    <h1>Welkom bij helpmaatje.nl</h1>
-    <p>Wij helpen je graag met digitale vragen. Of het nu gaat om DigiD, online formulieren, e-mail of apps – bij ons staat een maatje klaar om je stap voor stap te helpen via telefoon of beeldbellen.</p>
+    <img src="assets/logo.png" alt="Helpmaatje logo" class="logo">
+    <h1>Welkom bij Helpmaatje.nl</h1>
+    <p>Wij brengen mensen samen. Hulp nodig met digitale zaken zoals DigiD, e-mail of online formulieren? Bij Helpmaatje staat iemand voor je klaar.</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="hulp.html">Ik zoek hulp</a>
+      <a href="maatje-worden.html">Ik wil helpen</a>
+      <a href="abonnementen.html">Abonnementen</a>
+      <a href="veiligheid.html">Veiligheid</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-  <div class="buttons">
-    <a href="#">Ik zoek hulp</a>
-    <a href="#">Ik wil helpen</a>
-  </div>
+
+  <main>
+    <section class="cta">
+      <a class="button" href="hulp.html">Ik zoek hulp</a>
+      <a class="button" href="maatje-worden.html">Ik wil helpen</a>
+    </section>
+
+    <section class="info">
+      <h2>Wat is Helpmaatje?</h2>
+      <p>Helpmaatje is een veilig en toegankelijk platform dat mensen verbindt. Iedereen kan digitaal vastlopen – wij zorgen dat je er niet alleen voor staat. Via telefoon of beeldbellen krijg je hulp van een vriendelijk maatje dat weet hoe het werkt.</p>
+
+      <h2>Hoe werkt het?</h2>
+      <ol>
+        <li>Meld je aan via het formulier</li>
+        <li>Wij zoeken een passende match</li>
+        <li>Je wordt gebeld of gebeld via beeldbellen</li>
+      </ol>
+    </section>
+  </main>
+
   <footer>
-    &copy; 2025 Helpmaatje. Samen staan we sterker.
+    <p>&copy; 2025 Helpmaatje.nl – Samen staan we sterker</p>
+    <p><a href="veiligheid.html">Privacy & veiligheid</a> | <a href="contact.html">Contact</a></p>
   </footer>
 </body>
 </html>
