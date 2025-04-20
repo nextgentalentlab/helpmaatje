@@ -14,6 +14,7 @@
     }
     header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
@@ -21,10 +22,16 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
     .logo {
-      height: 60px;
+      height: 50px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 0.5rem;
     }
     nav a {
-      margin-left: 1.5rem;
       text-decoration: none;
       font-weight: 600;
       color: #007acc;
@@ -38,11 +45,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
     .hero img.hero-image {
-      max-width: 100%;
+      width: 100%;
+      max-width: 600px;
       max-height: 300px;
       border-radius: 12px;
       margin-bottom: 2rem;
@@ -50,33 +58,38 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     }
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       color: #004080;
       margin-bottom: 1rem;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       max-width: 700px;
       margin-bottom: 2rem;
     }
-    .hero .cta-buttons a {
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .cta-buttons a {
       background-color: #007acc;
       color: white;
       padding: 1rem 2rem;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      margin: 0.5rem;
       transition: background-color 0.3s;
     }
-    .hero .cta-buttons a:hover {
+    .cta-buttons a:hover {
       background-color: #005fa3;
     }
     .steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      padding: 3rem 2rem;
+      padding: 3rem 1rem;
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -99,6 +112,19 @@
       background-color: #f9f9f9;
       margin-top: 4rem;
     }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .cta-buttons a {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -115,7 +141,7 @@
   </header>
 
   <section class="hero">
-    <img src="assets/samen-helpen.jpg.png" alt="Twee mensen die elkaar helpen" class="hero-image">
+    <img src="assets/samen-helpen.jpg" alt="Twee mensen die elkaar helpen" class="hero-image">
     <h1>Samen sterk in digitale hulp</h1>
     <p>Helpmaatje verbindt mensen. Of je nu hulp zoekt met DigiD, e-mail of een formulier – wij zorgen voor een betrouwbare maat die je begeleidt. Persoonlijk. Veilig. Vertrouwd.</p>
     <div class="cta-buttons">
