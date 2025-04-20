@@ -38,13 +38,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 4rem 2rem 2rem;
+      padding: 2rem;
       text-align: center;
     }
     .hero img.hero-image {
       max-width: 100%;
+      max-height: 300px;
       border-radius: 12px;
       margin-bottom: 2rem;
+      object-fit: cover;
       box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     }
     .hero h1 {
@@ -101,7 +103,7 @@
 </head>
 <body>
   <header>
-   <img src="assets/logo.png" alt="Helpmaatje logo" class="logo">
+    <img src="assets/logo.png" alt="Helpmaatje logo" class="logo">
     <nav>
       <a href="index.html">Home</a>
       <a href="hulp.html">Ik zoek hulp</a>
@@ -113,8 +115,7 @@
   </header>
 
   <section class="hero">
-   <img src="assets/samen-helpen.jpg.png" alt="Twee mensen die elkaar helpen" class="hero-image">
-
+    <img src="assets/samen-helpen.jpg" alt="Twee mensen die elkaar helpen" class="hero-image">
     <h1>Samen sterk in digitale hulp</h1>
     <p>Helpmaatje verbindt mensen. Of je nu hulp zoekt met DigiD, e-mail of een formulier – wij zorgen voor een betrouwbare maat die je begeleidt. Persoonlijk. Veilig. Vertrouwd.</p>
     <div class="cta-buttons">
