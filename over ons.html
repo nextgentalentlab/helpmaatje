@@ -12,18 +12,33 @@
       background: #f9f9f9;
       color: #1a1a1a;
       line-height: 1.6;
-      padding: 2rem;
     }
     header {
       background-color: #ffffff;
-      padding: 2rem;
-      text-align: center;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-    header h1 {
-      margin: 0;
-      color: #004080;
-      font-size: 2.2rem;
+    .logo {
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #007acc;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #004c99;
     }
     main {
       max-width: 900px;
@@ -32,6 +47,9 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    h1 {
+      color: #004080;
     }
     h2 {
       color: #004080;
@@ -45,15 +63,28 @@
       padding: 2rem;
       font-size: 0.9rem;
       color: #666;
+      background-color: #f9f9f9;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Over ons</h1>
+    <img src="assets/logo.png" alt="Helpmaatje logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="over-ons.html">Over ons</a>
+      <a href="hulp.html">Ik zoek hulp</a>
+      <a href="maatje-worden.html">Ik wil helpen</a>
+      <a href="abonnementen.html">Abonnementen</a>
+      <a href="veiligheid.html">Veiligheid</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main>
+    <h1>Over ons</h1>
+
     <h2>De kracht van verbinding</h2>
     <p>
       Helpmaatje is ontstaan vanuit een eenvoudige gedachte: niemand zou alleen moeten staan als het gaat om digitale zaken. Van DigiD tot e-mail, van apps tot formulieren — voor veel mensen is dat niet vanzelfsprekend. Wij brengen daar verandering in, door mensen te verbinden met een betrouwbaar maatje.
