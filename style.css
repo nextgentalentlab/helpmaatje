@@ -31,7 +31,7 @@ nav a {
   text-align: center;
 }
 .hero img {
-  max-width: 100%;
+  max-width: 25%;
   border-radius: 10px;
   margin-bottom: 2rem;
 }
@@ -41,7 +41,7 @@ nav a {
 }
 .hero p {
   font-size: 1.2rem;
-  max-width: 800px;
+  max-width: 400px;
 }
 .container {
   max-width: 960px;
