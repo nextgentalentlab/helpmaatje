@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head><meta charset="UTF-8"><title>Voor instellingen</title><link rel="stylesheet" href="style.css"></head>
-<body>
+<body><!-- Google Translate dropdown -->
+<div id="google_translate_element" style="text-align:right; margin: 1rem;"></div>
+
 <header>
   <img src="logo.png" alt="Helpmaatje logo">
   <nav>
@@ -10,7 +12,13 @@
     <a href="vrijwilliger.html">Vrijwilliger</a>
     <a href="instellingen.html">Voor instellingen</a>
     <a href="over.html">Over ons</a>
-  </nav>
+  </nav><!-- Toegankelijkheidsknoppen -->
+<div style="text-align:right; margin: 0 1rem;">
+  <button onclick="adjustFontSize(true)">A+</button>
+  <button onclick="adjustFontSize(false)">A-</button>
+  <button onclick="speakText()">🔊 Laat voorlezen</button>
+</div>
+
 </header>
 
 <div class="container">
@@ -25,5 +33,27 @@
 </div>
 <footer>
   © Helpmaatje.nl – Betrokken, betrouwbaar en menselijk.
-</footer>
+</footer><!-- Scripts voor toegankelijkheid -->
+<script>
+function adjustFontSize(increase) {
+  const body = document.body;
+  const style = window.getComputedStyle(body, null).getPropertyValue('font-size');
+  const currentSize = parseFloat(style);
+  body.style.fontSize = increase ? (currentSize + 2) + 'px' : (currentSize - 2) + 'px';
+}
+function speakText() {
+  const text = document.body.innerText;
+  const msg = new SpeechSynthesisUtterance(text);
+  window.speechSynthesis.speak(msg);
+}
+</script>
+
+<!-- Google Translate script -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'nl'}, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body></html>
