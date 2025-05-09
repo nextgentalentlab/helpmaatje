@@ -1,28 +1,74 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head><meta charset="UTF-8"><title>Helpmaatje.nl</title><link rel="stylesheet" href="style.css"></head>
-<body>
-<header>
-  <img src="logo.png" alt="Helpmaatje logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="hulpvrager.html">Ik zoek hulp</a>
-    <a href="vrijwilliger.html">Vrijwilliger</a>
-    <a href="instellingen.html">Voor instellingen</a>
-    <a href="over.html">Over ons</a>
-  </nav>
-</header>
+<head>
+  <meta charset="UTF-8">
+  <title>Helpmaatje.nl</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 
-<section class="hero">
-  <img src="samen-helpen.jpg" alt="Maatje helpt oudere persoon">
-  <h1>Samen zorgen we voor elkaar</h1>
-  <p>Helpmaatje verbindt mensen met een hulpvraag aan vrijwilligers uit de buurt. Simpel, veilig en doeltreffend.</p>
-</section>
-<div class="container">
-  <h2>Wat doet Helpmaatje?</h2>
-  <p>We maken het makkelijk voor ouderen, mensen met een beperking of andere zorgvragen om hulp te krijgen van betrokken vrijwilligers.</p>
-</div>
-<footer>
-  © Helpmaatje.nl – Betrokken, betrouwbaar en menselijk.
-</footer>
-</body></html>
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'nl'}, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Tekstgrootte & Voorleesfunctie -->
+  <script>
+    function adjustFontSize(increase) {
+      const body = document.body;
+      const style = window.getComputedStyle(body, null).getPropertyValue('font-size');
+      const currentSize = parseFloat(style);
+      body.style.fontSize = increase ? (currentSize + 2) + 'px' : (currentSize - 2) + 'px';
+    }
+
+    function speakText() {
+      const text = document.body.innerText;
+      const msg = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
+</head>
+<body>
+  <!-- Google Translate dropdown -->
+  <div id="google_translate_element" style="text-align: right; margin: 0.5rem 1rem 0 0;"></div>
+
+  <!-- Navigatie -->
+  <header>
+    <img src="logo.png" alt="Helpmaatje logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="hulpvrager.html">Ik zoek hulp</a>
+      <a href="vrijwilliger.html">Vrijwilliger</a>
+      <a href="instellingen.html">Voor instellingen</a>
+      <a href="over.html">Over ons</a>
+    </nav>
+  </header>
+
+  <!-- Toegankelijkheidsknoppen -->
+  <div style="text-align: right; margin: 1rem;">
+    <button onclick="adjustFontSize(true)">A+</button>
+    <button onclick="adjustFontSize(false)">A-</button>
+    <button onclick="speakText()">🔊 Laat voorlezen</button>
+  </div>
+
+  <!-- Hero-sectie -->
+  <section class="hero">
+    <img src="hero.jpg" alt="Maatje helpt oudere persoon">
+    <h1>Samen zorgen we voor elkaar</h1>
+    <p>Helpmaatje verbindt mensen met een hulpvraag aan vrijwilligers uit de buurt. Simpel, veilig en doeltreffend.</p>
+  </section>
+
+  <!-- Inhoud -->
+  <div class="container">
+    <h2>Wat doet Helpmaatje?</h2>
+    <p>We maken het makkelijk voor ouderen, mensen met een beperking of andere zorgvragen om hulp te krijgen van betrokken vrijwilligers.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © Helpmaatje.nl – Betrokken, betrouwbaar en menselijk.
+  </footer>
+</body>
+</html>
