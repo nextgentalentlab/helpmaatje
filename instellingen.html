@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head><meta charset="UTF-8"><title>Voor instellingen</title><link rel="stylesheet" href="style.css"></head>
+<head><meta charset="UTF-8"><title>Voor instellingen</title><link rel="stylesheet" href="style.css"></head><script>
+function speakText() {
+  const text = document.body.innerText;
+  const lang = document.documentElement.lang || 'nl'; // pakt HTML-taal
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = lang;
+  window.speechSynthesis.cancel(); // voorkom dubbele spraak
+  window.speechSynthesis.speak(utterance);
+}
+</script>
+
 <body><!-- Google Translate dropdown -->
 <div id="google_translate_element" style="text-align:right; margin: 1rem;"></div>
 
